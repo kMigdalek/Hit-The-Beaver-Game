@@ -16,7 +16,7 @@ git clone https://github.com/kmigdalek/-Hit-The-Beaver-Game.git
 
 2. Open the project folder
 
-cd -Hit-The-Beaver-Game
+cd Hit-The-Beaver-Game
 
 3. Open the file
 
