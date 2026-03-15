@@ -6,7 +6,7 @@ Simple browser game created with HTML, CSS and JavaScript.
 
 You can play the game here:
 
-https://kmigdalek.github.io/-Hit-The-Beaver-Game/
+https://kmigdalek.github.io/Hit-The-Beaver-Game/
 
 ## Run Locally
 
