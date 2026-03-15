@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-family: arial;
+  font-family: "Press Start 2P", cursive;
+}
+body {
+  background-color: #4b6b3c;
+  overflow: hidden;
+}
+.main,
+.level-info {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+.main__title,
+.levelspan {
+  display: flex;
+  flex-direction: column;
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.level-info {
+  top: 25%;
+  display: none;
+}
+.level-info.on {
+  display: block;
+}
+.levelspan {
+  margin-top: 30px;
+}
+.level-info__level {
+  color: #907a48;
+}
+.title {
+  font-family: "Press Start 2P", cursive;
+  margin-top: 20px;
+}
+.title__title1 {
+  animation: title1_3_move.3s linear;
+}
+.title__title2 {
+  animation: title2_move 0.3s 0.3s linear both;
+}
+.title__title3 {
+  animation: title1_3_move 0.3s 0.6s linear both;
+}
+.main__title-off {
+  animation: tittle_disappear 1.5s 1s linear both;
+}
+
+.main__button,
+.lose__button {
+  text-align: center;
+  width: 300px;
+  height: 50px;
+  margin-top: 50px;
+  font-size: 22px;
+  line-height: 50px;
+  background-color: #888;
+  border: 1px solid black;
+  box-shadow: 2px 2px black;
+  font-family: "Press Start 2P", cursive;
+  animation: button_appear 1s 0.9s linear both;
+  cursor: pointer;
+}
+.main__button-off {
+  animation: button_disappear 1s linear both;
+}
+@media (min-width: 768px) {
+  .main__title,
+  .levelspan {
+    font-size: 80px;
+  }
+  .main__button {
+    margin-top: 100px;
+    width: 500px;
+    height: 70px;
+    font-size: 28px;
+    line-height: 70px;
+  }
+}
+@keyframes title1_3_move {
+  0% {
+    transform: translatex(-250%);
+  }
+  100% {
+    transform: translatex(0%);
+  }
+}
+@keyframes title2_move {
+  0% {
+    transform: translatex(1400%);
+  }
+  100% {
+    transform: translatex(0%);
+  }
+}
+@keyframes button_appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes button_disappear {
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes tittle_disappear {
+  90% {
+    transform: scale(1.5);
+    color: red;
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.text {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 80%;
+  margin: 20px auto;
+  font-size: 60px;
+  letter-spacing: 1px;
+  color: white;
+  line-height: 20px;
+}
+
+.text__text {
+  font-size: 20px;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.text__cursor {
+  opacity: 0;
+  transition: 0.2s;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.text__cursor.active {
+  opacity: 1;
+}
+
+.timer,
+.lose {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  color: white;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -250%);
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+.timer__span,
+.timer__counting {
+  font-family: "Press Start 2P", cursive;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .timer,
+  .lose {
+    font-size: 50px;
+  }
+}
+.timer.active {
+  animation: gameStarter 0.6s linear both;
+}
+@keyframes gameStarter {
+  0% {
+    transform: translate(-50%, -250%);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, -30%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+.skip {
+  position: absolute;
+  bottom: 2vh;
+  right: 2vh;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  display: none;
+}
+.skip__span {
+  font-family: "Share Tech Mono", monospace;
+}
+.skip.active {
+  display: block;
+}
+.game {
+  height: 100vh;
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: none;
+}
+.game__statistics {
+  position: absolute;
+  display: flex;
+  margin: 0 auto;
+  top: 100%;
+  left: 0%;
+  transform: translate(-0%, -100%);
+  justify-content: space-between;
+  width: 100%;
+}
+.statistic {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  font-size: 12px;
+  align-items: center;
+  line-height: 20px;
+  color: white;
+}
+@media (min-width: 768px) {
+  .statistic {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.gamePlace {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+}
+.gamePicture {
+  position: absolute;
+  display: none;
+  background-image: url(beaver.png);
+  width: 18vw;
+  height: 18vh;
+  background-size: contain;
+  background-position: center;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+}
+.gamePicture.on {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .gamePicture {
+    width: 12vw;
+    height: 12vh;
+  }
+}
+@media (min-width: 1440px) {
+}
+
+.lose {
+  top: 80%;
+  animation: loseAnimation 1s linear both;
+}
+
+@keyframes loseAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    color: #907a48;
+  }
+}
+.lose__button {
+  color: white;
+}
+audio {
+  display: none;
+}

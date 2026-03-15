@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/bd7ab137b0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- MAIN MENU -->
+
+    <div class="main">
+      <div class="main__title">
+        <span class="title__title1 title">HIT</span>
+        <span class="title__title2 title">THE</span>
+        <span class="title__title3 title">BEAVER</span>
+      </div>
+      <div class="main__button">New Game</div>
+    </div>
+
+    <div class="text">
+      <span class="text__text"></span><span class="text__cursor">|</span>
+    </div>
+
+    <div class="timer">
+      <span class="timer__span">Game</span>
+      <span class="timer__span">will </span>
+      <span class="timer__span">start</span>
+      <span class="timer__span">in:</span>
+      <span class="timer__counting">3</span>
+    </div>
+
+    <div class="skip">
+      <span class="skip__span"
+        >skip<i class="fa-solid fa-arrow-right"></i
+      ></span>
+    </div>
+
+    <!-- GAME -->
+
+    <div class="game">
+      <div class="game__statistics">
+        <div class="statistics__life-points statistic">
+          <span class="life-points__name">LIFES</span>
+          <span class="life-points__number">10</span>
+        </div>
+        <div class="statistics__level statistic">
+          <span class="level__name">LEVEL</span>
+          <span class="level__number">EASY</span>
+        </div>
+        <div class="statistics__game-points statistic">
+          <span class="game-points__name">POINTS</span>
+          <span class="game-points__number">0</span>
+        </div>
+      </div>
+
+      <div class="gamePlace">
+        <div class="gamePicture"></div>
+      </div>
+    </div>
+
+    <div class="level-info">
+      <span class="level-info__span levelspan">LEVEL</span>
+      <span class="level-info__level levelspan"></span>
+    </div>
+
+    <!-- MUSIC -->
+
+    <audio id="mainMusic" src="MainMusic1.mp3"></audio>
+    <audio id="mainMusic2" src="MainMusic2.mp3"></audio>
+    <audio id="loseMusic" src="loseMusic.mp3"></audio>
+    <audio id="hitSound" src="hitSound.mp3"></audio>
+    <audio id="hitSound2" src="hitSound2.mp3"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
